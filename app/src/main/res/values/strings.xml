@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">KillinIt</string>
+    <string name="empty_caption_title">empty</string>
+    <string name="notification_fail">Image failed to upload...</string>
+    <string name="notification_share_link">Share link</string>
+    <string name="notifaction_success">Successfully uploaded</string>
+    <string name="notification_progress">Uploading image...</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -90,4 +95,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_uplaod">UplaodActivity</string>
 </resources>

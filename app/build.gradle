@@ -10,6 +10,14 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        ["simperiumApp", "simperiumKey"].each { property ->
+            if (!project.hasProperty(property))
+                throw new ProjectConfigurationException("Project build missing ${property} property", null)
+        }
+
+        buildConfigField "String", "SIMPERIUM_APP", "\"${project.simperiumApp}\""
+        buildConfigField "String", "SIMPERIUM_KEY", "\"${project.simperiumKey}\""
     }
     buildTypes {
         release {
@@ -31,4 +39,7 @@ dependencies {
     compile 'com.android.support:design:23.1.0'
     compile 'com.simperium.android:simperium:0.6.6'
     compile 'com.sangupta:imgur-client:0.2.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
 }
